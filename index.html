@@ -23,6 +23,39 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="alternate icon" href="favicon.svg">
 
+<!--
+  ============================================================
+  HOW TO EDIT THIS PAGE
+  ============================================================
+  1. Your projects live in the PROJECTS array near the top of
+     the <script> at the bottom of this file. Add an object,
+     save, done — no HTML editing needed.
+  2. Your skills live in the SKILLS array right next to it.
+     Same deal: add a group or an item, save.
+  3. Your email / GitHub / LinkedIn links live in the LINKS
+     object, also in that same script block. Update the same
+     values in the JSON-LD block just below it, and in the
+     og:/twitter: meta tags above, so previews and search
+     results stay in sync.
+  3b. TIL entries ("today I learned", unlocked by a random
+     capitals question) live in the TIL_ENTRIES array, right
+     next to LINKS. Same pattern — add an object, save.
+  4. Everything else (About, Now, Involvement, Education) is
+     plain text lower down in the HTML body — find the section
+     by its comment header and edit the text directly.
+  5. Drop an actual "resume.pdf" in the repo root and the
+     Resume links in the hero and contact section will work —
+     until then they'll just 404, which is fine to leave while
+     you're still writing it.
+  6. To publish: create a repo named exactly
+     "Sanath-Koundinya.github.io", upload this file renamed to
+     "index.html" (plus favicon.svg, 404.html, robots.txt,
+     sitemap.xml, resume.pdf from this same folder) to the repo
+     root, and it goes live at https://sanath-koundinya.github.io
+     within a minute or two. Full steps in README.md.
+  ============================================================
+-->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=Inter:wght@400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
@@ -272,6 +305,23 @@
     font-size: 0.98rem;
     color: var(--ink-soft);
   }
+  .hobby-row{ display: flex; gap: 0.6rem; margin-top: 0.9rem; }
+  .journey{ margin-top: 2.4rem; }
+  .journey-label{
+    font-family: var(--font-hand); color: var(--sage-deep);
+    font-size: 1.2rem; margin: 0 0 0.8rem;
+  }
+  .journey-strip{
+    display: flex; align-items: flex-end; gap: 0.9rem; flex-wrap: wrap;
+  }
+  .journey-place{ display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+  .journey-place span{
+    font-family: 'Inter', sans-serif; font-size: 0.7rem; color: var(--ink-soft);
+    white-space: nowrap;
+  }
+  .journey-path{ margin-bottom: 1.1rem; }
+  @media (max-width: 680px){ .journey-strip{ gap: 0.6rem; } .journey-path{ display: none; } }
+
   .margin-note .label{
     font-family: 'Inter', sans-serif;
     font-size: 0.8rem;
@@ -522,10 +572,10 @@
       <p class="role">Electrical Engineering, IIT Kanpur</p>
       <p class="intro">I build at the edges of hardware and software — circuits, code, and the math that connects them. Currently a second-year undergraduate, looking for research and internship opportunities where I can learn by doing.</p>
       <div class="links">
-        <a href="mailto:sanathk25@iitk.ac.in">sanathk25@iitk.ac.in</a>
         <a href="https://github.com/Sanath-Koundinya" target="_blank" rel="noopener me">GitHub</a>
-        <a href="https://linkedin.com/in/sanath-koundinya-7672ba1b4" target="_blank" rel="noopener me">LinkedIn</a>
-        <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <a href="mailto:your-email@example.com">Email</a>
+        <a href="#" target="_blank" rel="noopener me">LinkedIn</a>
+        <a href="resume.pdf" target="_blank" rel="noopener">Resume</a>
       </div>
     </section>
 
@@ -537,6 +587,46 @@
         <div class="margin-note">
           <span class="label">elsewhere</span>
           Twelve-plus years of Carnatic music training and stage performances. Debate with DebSoc. Campus journalism with Vox Populi. Different rooms, same habit of paying close attention.
+          <div class="hobby-row" aria-hidden="true">
+            <svg viewBox="0 0 40 40" width="30" height="30"><path d="M8,30 L28,10 M28,10 L22,10 M28,10 L28,16" fill="none" stroke="var(--rust)" stroke-width="2" stroke-linecap="round"/><path d="M10,30 Q20,34 30,30" fill="none" stroke="var(--brass)" stroke-width="2" stroke-linecap="round"/><circle cx="9" cy="30" r="1.6" fill="var(--ink)"/></svg>
+            <svg viewBox="0 0 40 40" width="30" height="30"><path d="M6,10 H30 A4,4 0 0 1 34,14 V24 A4,4 0 0 1 30,28 H16 L9,34 V28 H6 A4,4 0 0 1 2,24 V14 A4,4 0 0 1 6,10 Z" fill="none" stroke="var(--sage-deep)" stroke-width="2"/><path d="M10,17 H26 M10,22 H20" stroke="var(--sage-deep)" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 40 40" width="30" height="30"><rect x="8" y="7" width="18" height="26" rx="1.5" fill="none" stroke="var(--brass-deep)" stroke-width="2"/><path d="M12,13 H22 M12,18 H22 M12,23 H18" stroke="var(--brass-deep)" stroke-width="1.6" stroke-linecap="round"/><path d="M24,29 L33,20 L36,23 L27,32 L23,33 Z" fill="var(--rust)" opacity="0.85"/></svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey">
+        <p class="journey-label">bengaluru → iit kanpur</p>
+        <div class="journey-strip" aria-hidden="true">
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><path d="M10,40 H50 M14,40 V22 H46 V40" fill="none" stroke="var(--ink-soft)" stroke-width="1.6"/><path d="M14,22 Q30,6 46,22" fill="var(--brass)" stroke="var(--brass-deep)" stroke-width="1.6"/><path d="M18,40 V27 M24,40 V27 M30,40 V27 M36,40 V27 M42,40 V27" stroke="var(--sage-deep)" stroke-width="1.6"/><path d="M28,10 L30,4 L32,10" fill="none" stroke="var(--rust)" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span>Vidhana Soudha</span>
+          </div>
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><path d="M30,4 L52,20 H8 Z" fill="none" stroke="var(--sage-deep)" stroke-width="1.6"/><rect x="12" y="20" width="36" height="20" fill="none" stroke="var(--sage-deep)" stroke-width="1.6"/><path d="M12,26 H48 M12,32 H48 M20,20 V40 M40,20 V40" stroke="var(--sage)" stroke-width="1.2"/></svg>
+            <span>Lalbagh</span>
+          </div>
+          <svg class="journey-path" viewBox="0 0 90 20" width="70" height="16" aria-hidden="true"><path d="M2,14 Q25,-2 45,10 T88,6" fill="none" stroke="var(--ink-soft)" stroke-width="1.4" stroke-dasharray="1 6" stroke-linecap="round"/><path d="M76,2 L88,6 L77,11 Z" fill="var(--rust)"/></svg>
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><path d="M10,40 H50 M16,40 V16 H44 V40" fill="none" stroke="var(--ink-soft)" stroke-width="1.6"/><path d="M16,16 Q30,2 44,16" fill="var(--rust)" stroke="var(--ink)" stroke-width="1.4" opacity="0.9"/><rect x="26" y="26" width="8" height="14" fill="none" stroke="var(--sage-deep)" stroke-width="1.4"/></svg>
+            <span>Main Building</span>
+          </div>
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><ellipse cx="18" cy="40" rx="10" ry="3" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/><rect x="10" y="20" width="16" height="20" rx="8" fill="var(--sage)" stroke="var(--sage-deep)" stroke-width="1.6"/><ellipse cx="34" cy="40" rx="9" ry="3" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/><rect x="27" y="26" width="14" height="14" rx="7" fill="var(--sage-deep)" stroke="var(--ink)" stroke-width="1.4"/><ellipse cx="48" cy="40" rx="7" ry="2.4" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/><rect x="42" y="30" width="12" height="10" rx="6" fill="var(--brass)" stroke="var(--brass-deep)" stroke-width="1.4"/></svg>
+            <span>L7</span>
+          </div>
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><rect x="12" y="14" width="36" height="26" fill="none" stroke="var(--brass-deep)" stroke-width="1.6"/><path d="M12,14 H48" stroke="var(--brass-deep)" stroke-width="1.6"/><path d="M18,20 H24 M18,26 H24 M18,32 H24 M30,20 H42 V36 H30 Z" stroke="var(--brass)" stroke-width="1.3" fill="none"/></svg>
+            <span>Library</span>
+          </div>
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><path d="M10,40 A20,20 0 0 1 50,40" fill="none" stroke="var(--sage-deep)" stroke-width="1.6"/><path d="M16,40 A14,14 0 0 1 44,40 M22,40 A8,8 0 0 1 38,40" fill="none" stroke="var(--sage)" stroke-width="1.3"/><rect x="26" y="20" width="8" height="10" fill="var(--rust)" opacity="0.85"/></svg>
+            <span>OAT</span>
+          </div>
+          <div class="journey-place">
+            <svg viewBox="0 0 60 50" width="46" height="40"><circle cx="14" cy="32" r="8" fill="none" stroke="var(--ink)" stroke-width="1.8"/><circle cx="40" cy="32" r="8" fill="none" stroke="var(--ink)" stroke-width="1.8"/><path d="M14,32 L24,14 H32 M14,32 L26,32 L40,32 M26,32 L30,14" fill="none" stroke="var(--rust)" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <span>the cycle</span>
+          </div>
         </div>
       </div>
     </section>
@@ -647,11 +737,10 @@
       <p class="eyebrow">contact</p>
       <p style="max-width:var(--measure); margin:0;">Best way to reach me is email. Also on GitHub and LinkedIn.</p>
       <div class="contact-links">
-        <a href="mailto:sanathk25@iitk.ac.in">sanathk25@iitk.ac.in</a>
+        <a href="mailto:your-email@example.com">your-email@example.com</a>
         <a href="https://github.com/Sanath-Koundinya" target="_blank" rel="noopener me">GitHub</a>
-        <a href="https://linkedin.com/in/sanath-koundinya-7672ba1b4" target="_blank" rel="noopener me">LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener me">LinkedIn</a>
         <a href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
-      
       </div>
     </section>
 
