@@ -1,6 +1,6 @@
 # sanath-koundinya.github.io
 
-Personal site for Sanath Koundinya — a single static page, no build step, no framework. Everything lives in `index.html`; a few small extra files round it out for a proper GitHub Pages deploy.
+My Personal site!
 
 ## What's in here
 
@@ -10,7 +10,7 @@ favicon.svg     small hand-drawn dragon mark used as the browser tab icon
 404.html        matches the site style, shown for broken/missing links
 robots.txt      tells search engines the site is crawlable
 sitemap.xml     one-page sitemap
-resume.pdf      not included — add your own (see below)
+resume.pdf      
 ```
 
 ## Preview it locally
