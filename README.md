@@ -13,26 +13,6 @@ sitemap.xml     one-page sitemap
 resume.pdf      
 ```
 
-## Preview it locally
-
-No build tools needed — it's plain HTML/CSS/JS. Either:
-
-- Double-click `index.html` to open it directly in a browser, or
-- Run a tiny local server from this folder so relative links behave exactly like they will in production:
-  ```bash
-  python3 -m http.server 8000
-  # then visit http://localhost:8000
-  ```
-
-## Deploy to GitHub Pages
-
-1. Create a **new GitHub repo** named exactly `Sanath-Koundinya.github.io` (must match your GitHub username, case-insensitive).
-2. Upload every file in this folder to the **root** of that repo — `index.html`, `favicon.svg`, `404.html`, `robots.txt`, `sitemap.xml`, and `resume.pdf` once you have one.
-3. In the repo, go to **Settings → Pages**, and under "Build and deployment" set the source to **Deploy from a branch**, branch `main`, folder `/ (root)`. (On a lot of repos this is already the default and Pages turns itself on automatically.)
-4. Wait a minute or two, then visit `https://sanath-koundinya.github.io`.
-
-Optional: if you ever point a custom domain at this, add a `CNAME` file at the repo root containing just the domain name, and update the `og:url`, `canonical`, and JSON-LD `url` fields in `index.html` to match.
-
 ## Editing content
 
 You shouldn't need to touch the CSS or the page structure for routine updates — the same instructions are also in a comment at the top of `index.html`:
@@ -44,8 +24,3 @@ You shouldn't need to touch the CSS or the page structure for routine updates �
 - **About / Now / Involvement / Education** — plain text further down the HTML body; find the section by its comment header.
 - **Resume** — drop a file named `resume.pdf` in the repo root. The "Resume" links in the hero and contact section already point at it.
 
-## Notes
-
-- The site is a single `index.html` on purpose — easy to review as one diff, easy to host anywhere, nothing to build.
-- Respects `prefers-reduced-motion` throughout (the entrance animation and the dragon's draw-in both fall back to a static, fully-visible state).
-- Includes a print stylesheet, so the page is readable if someone prints it or saves it as a PDF.
